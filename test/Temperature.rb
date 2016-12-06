@@ -18,7 +18,10 @@ class TemperatureTest < Minitest::Test
         assert_equal(212, temperature.to_fahrenheit)
     end
 
-  
+    def test_42_celsius_to_kelvin
+      temperature = Temperature.new(100)
+      assert_equal(375.15, temperature.to_kelvin)
+    end
 
     def test_input_is_numeric
         assert_throws Exception do
